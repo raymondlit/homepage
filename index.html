@@ -674,6 +674,170 @@
             font-size: 0.9rem;
             opacity: 0.9;
         }
+        
+        /* 新增：教学工具大集合样式 */
+        .tools-section {
+            margin-top: 50px;
+            grid-column: 1 / -1;
+        }
+
+        .tools-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .tools-header h2 {
+            font-family: 'Microsoft YaHei', sans-serif;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .tools-header h2 i {
+            color: var(--accent-color);
+        }
+
+        .tools-header p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--text-color);
+            opacity: 0.8;
+            font-size: 1.1rem;
+        }
+
+        .tools-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .tool-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--accent-color);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .tool-icon {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 25px;
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+        }
+
+        .tool-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tool-title {
+            font-family: 'Microsoft YaHei', sans-serif;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .tool-description {
+            margin-bottom: 20px;
+            color: var(--text-color);
+            opacity: 0.9;
+            flex-grow: 1;
+        }
+
+        .tool-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-color);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            width: fit-content;
+        }
+
+        .tool-link:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .tool-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--bg-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .tool-badge:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .tool-badge i {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .tool-badge-content {
+            flex-grow: 1;
+        }
+
+        .tool-badge-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .tool-badge-link {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .tool-badge-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -895,6 +1059,157 @@
                         <li><i class="fas fa-check-circle"></i> 专业技术培训</li>
                         <li><i class="fas fa-check-circle"></i> 学术成果转化</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 新增：教学工具大集合部分 -->
+        <div class="tools-section">
+            <div class="tools-header">
+                <h2><i class="fas fa-toolbox"></i> 教学工具大集合</h2>
+                <p>李蒙教授开发的一系列创新教学工具，助力教学实践与学习体验提升</p>
+            </div>
+            
+            <div class="tools-container">
+                <!-- 工具1 -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="tool-title">MCS-51单片机中断系统</h3>
+                        <p class="tool-description">直观展示单片机中断系统的工作原理，帮助学生理解嵌入式系统的核心概念。</p>
+                        <a href="https://raymondlit.github.io/MCU_Education_Platform/" class="tool-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> 访问工具
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 工具2 -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="tool-title">课堂教学互动平台</h3>
+                        <p class="tool-description">创新的课堂互动工具，支持实时问答、投票和反馈，增强教学参与度。</p>
+                        <a href="https://raymondlit.github.io/classroom/" class="tool-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> 访问工具
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 工具3 -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="tool-title">声乐动画演示</h3>
+                        <p class="tool-description">可视化展示声乐教学中呼吸与吞咽的生理过程，辅助声乐技巧教学。</p>
+                        <a href="https://raymondlit.github.io/classroom/声乐教学呼吸与吞咽动画HTML实现.html" class="tool-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> 访问工具
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 工具4 -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="tool-title">单词记忆训练</h3>
+                        <p class="tool-description">互动式单词记忆游戏，通过游戏化学习提升词汇记忆效果和趣味性。</p>
+                        <a href="https://raymondlit.github.io/classroom/单词记忆训练V32.html" class="tool-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> 访问工具
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 工具5 -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="tool-title">英语学习工具大全</h3>
+                        <p class="tool-description">一站式英语学习资源平台，包含多种学习工具和练习资源。</p>
+                        <a href="https://raymondlit.github.io/ESL/英语学习工具大全.html" class="tool-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> 访问工具
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 工具6 -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-acorn"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="tool-title">中医针灸经络穴位学习</h3>
+                        <p class="tool-description">交互式中医学习工具，展示人体经络穴位，辅助中医教学与实践。</p>
+                        <a href="https://raymondlit.github.io/acupoint/" class="tool-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> 访问工具
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 工具7 -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="tool-title">互动教学屏</h3>
+                        <p class="tool-description">多功能互动教学平台，支持多媒体教学、实时互动和协作学习。</p>
+                        <a href="https://raymondlit.github.io/blendedclassroom/" class="tool-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> 访问工具
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 工具快捷访问 -->
+            <div class="tool-grid">
+                <div class="tool-badge">
+                    <i class="fas fa-microchip"></i>
+                    <div class="tool-badge-content">
+                        <div class="tool-badge-title">单片机中断系统</div>
+                        <a href="https://raymondlit.github.io/MCU_Education_Platform/" class="tool-badge-link" target="_blank">
+                            立即访问 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="tool-badge">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <div class="tool-badge-content">
+                        <div class="tool-badge-title">课堂互动</div>
+                        <a href="https://raymondlit.github.io/classroom/" class="tool-badge-link" target="_blank">
+                            立即访问 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="tool-badge">
+                    <i class="fas fa-music"></i>
+                    <div class="tool-badge-content">
+                        <div class="tool-badge-title">声乐动画</div>
+                        <a href="https://raymondlit.github.io/classroom/声乐教学呼吸与吞咽动画HTML实现.html" class="tool-badge-link" target="_blank">
+                            立即访问 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="tool-badge">
+                    <i class="fas fa-gamepad"></i>
+                    <div class="tool-badge-content">
+                        <div class="tool-badge-title">单词记忆训练</div>
+                        <a href="https://raymondlit.github.io/classroom/单词记忆训练V32.html" class="tool-badge-link" target="_blank">
+                            立即访问 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
